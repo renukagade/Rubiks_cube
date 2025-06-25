@@ -1,0 +1,148 @@
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  color: #ffffff;
+  margin: 0;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #00f7ff;
+  text-shadow: 0 0 10px #00f7ff;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+button {
+  display: block;
+  margin: 0 auto 30px auto;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #121212;
+  background: linear-gradient(135deg, #00eaff, #00c7d6);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 234, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #00c7d6, #00eaff);
+  transform: scale(1.05);
+}
+
+.svg-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.svg-container > div {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 12px;
+  width: fit-content;
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.2);
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid #00eaff20;
+  transition: transform 0.3s ease;
+}
+
+.svg-container > div:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.4);
+}
+
+.svg-container h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.2rem;
+  color: #00eaff;
+  text-align: center;
+  text-shadow: 0 0 5px #00eaff;
+}
+
+.svg-container hr {
+  margin-top: 12px;
+  border: none;
+  height: 1px;
+  background-color: #333;
+  width: 100%;
+}
+
+svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Animation for SVG cubes */
+svg rect {
+  transition: transform 0.3s ease;
+}
+svg rect:hover {
+  transform: scale(1.1);
+  stroke: #ffffff;
+  stroke-width: 1.5;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  .svg-container > div {
+    padding: 16px;
+  }
+
+  .svg-container h3 {
+    font-size: 1rem;
+  }
+
+  svg {
+    width: 260px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  svg {
+    width: 220px;
+    height: auto;
+  }
+
+  .svg-container {
+    gap: 20px;
+  }
+
+  .svg-container > div {
+    padding: 14px;
+  }
+}
